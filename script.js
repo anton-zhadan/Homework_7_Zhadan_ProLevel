@@ -135,7 +135,7 @@
 //     maxIndex = i;
 // }
 
-//это удалается и пишется новый код
+// //это удалается и пишется новый код
 // if (i===0){
 //     minValue = arrA[i];
 //     maxValue = arrA[i];
@@ -148,7 +148,7 @@
 //         maxValue = arrA[i];
 //         }
 //     }
-//}
+// }
 
 // console.log (arrA);
 // console.log (`Min index = ${minIndex}`);
@@ -172,7 +172,9 @@
 
 //Само дз 7
 //первое условие, запросить у пользователя длину массива и наполнить массив рандомными числами
+
 arrA = new Array(+prompt(`Enter length of arr!`));
+arrB = [];
 
 for (i=0, min=-10, max=10; i<arrA.length; i++) {
     arrA[i] = Math.floor(Math.random() * (max - min +1)) + min;
@@ -194,6 +196,12 @@ for (i=0, min=-10, max=10; i<arrA.length; i++) {
         console.log (`${arrA[i]} простое число`);
     } else {
         console.log (`${arrA[i]} непростое число`);
-    }
-    
+    }    
 }
+
+// arrB.push(arrA[i]);
+// console.log (arrB);
+// arrB[arrB.length] = arrA[i];
+// console.log (arrB);
+
+
