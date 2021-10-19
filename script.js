@@ -81,7 +81,7 @@
 //     arrA[i] = Math.floor (Math.random() * (max - min + 1)) + min;
 
 //     //это более короткий способ перебора массива
-//     //таакже подойдет для получения и максимального значения числа в массиве
+//     //также подойдет для получения и максимального значения числа в массиве
 // if (i===0){
 //     minValue = arrA[i];
 //     maxValue = arrA[i];
@@ -121,19 +121,19 @@
 
 //условие для переноса чисел в новый массив
 
-arrA = new Array(10);
+// arrA = new Array(10);
 
 
-for (i=0, min = -10, max=10, minIndex=maxIndex=0; i<arrA.length; i++) {
-    arrA[i] = Math.floor (Math.random() * (max - min + 1)) + min;
+// for (i=0, min = -10, max=10, minIndex=maxIndex=0; i<arrA.length; i++) {
+//     arrA[i] = Math.floor (Math.random() * (max - min + 1)) + min;
 
-if (arrA[i]<arrA[minIndex]) {
-    minIndex = i;
-}
+// if (arrA[i]<arrA[minIndex]) {
+//     minIndex = i;
+// }
 
-if (arrA[i]>arrA[maxIndex]){
-    maxIndex = i;
-}
+// if (arrA[i]>arrA[maxIndex]){
+//     maxIndex = i;
+// }
 
 //это удалается и пишется новый код
 // if (i===0){
@@ -148,24 +148,52 @@ if (arrA[i]>arrA[maxIndex]){
 //         maxValue = arrA[i];
 //         }
 //     }
+//}
+
+// console.log (arrA);
+// console.log (`Min index = ${minIndex}`);
+// console.log (`Max index = ${maxIndex}`);
+
+// arrB = [];
+
+// if (minIndex>maxIndex) {
+//     startIndex = maxIndex;
+//     endIndex = minIndex;
+// } else {
+//     startIndex = minIndex;
+//     endIndex = maxIndex;
+// }
+
+// for (i=0, startIndex+=1; startIndex<endIndex; startIndex++, i++) {
+//     arrB[i] = arrA[startIndex];
+// }
+
+// console.log(arrB);
+
+//Само дз 7
+//первое условие, запросить у пользователя длину массива и наполнить массив рандомными числами
+arrA = new Array(+prompt(`Enter length of arr!`));
+
+for (i=0, min=-10, max=10; i<arrA.length; i++) {
+    arrA[i] = Math.floor(Math.random() * (max - min +1)) + min;
 }
+    console.log (arrA); 
 
-console.log (arrA);
-console.log (`Min index = ${minIndex}`);
-console.log (`Max index = ${maxIndex}`);
+//второе условие, в сформированном массиве найти простые числа и записать в массив arrB
+ for (i=0; i<arrA.length; i++){
+     flag = true;
+    console.log (i);
 
-arrB = [];
-
-if (minIndex>maxIndex) {
-    startIndex = maxIndex;
-    endIndex = minIndex;
-} else {
-    startIndex = minIndex;
-    endIndex = maxIndex;
+    for (j=2; j<i; j++) {
+        console.log (` ${j}`);
+        if(arrA[i] % j === 0) {
+            flag = false;
+        }
+    }
+    if (flag) {
+        console.log (`${arrA[i]} простое число`);
+    } else {
+        console.log (`${arrA[i]} непростое число`);
+    }
+    
 }
-
-for (i=0, startIndex+=1; startIndex<endIndex; startIndex++, i++) {
-    arrB[i] = arrA[startIndex];
-}
-
-console.log(arrB);
