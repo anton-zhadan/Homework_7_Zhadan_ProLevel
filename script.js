@@ -200,30 +200,4 @@ for (i=0, min=-10, max=10; i<arrA.length; i++) {
     }    
 }
 
-// for (i=0; i<arrA; i++){
-//     arrB[arrB.length] = arrA[i];
-// }
-
-
 console.log (arrB);
-
-
-// arrB.push(arrA[i]);
-// console.log (arrB);
-
-
-
-
-
-// for (i = 0; i <= 10; i++) {
-//     console.log(`i =  ${i}`);
-//     // i считает от 0 до 10;
-//     for (j = 0; j <= i; j++) {
-//         console.log(`j = ${j}`);
-//         // j считает для каждого i;
-//     }
-// }
-
-// for (i=0; i<arr_1.lenght; i++) {
-    //arr_2[arr_2.length] = arr_1[i];
-//} see this
